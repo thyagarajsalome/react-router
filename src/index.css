@@ -28,9 +28,10 @@ a {
   display: inline-block;
   padding: 5px 10px;
   margin: 0 10px;
-  color: #000;
 }
-
+a.active {
+  color: dodgerblue;
+}
 .navbar button {
   background: dodgerblue;
   color: #fff;
