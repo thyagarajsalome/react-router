@@ -1,14 +1,14 @@
+// Components/NotFound.js
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
   return (
     <div>
-      <h2>404 | Page not found</h2>
+      <h1>404 | Page Not Found</h1>
       <br />
-      <button onClick={() => navigate("/")}>Go to homepage</button>{" "}
-      {/* Navigate to homepage */}
+
+      <Link to="/">Go back to Home</Link>
     </div>
   );
 };
