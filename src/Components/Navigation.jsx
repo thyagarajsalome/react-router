@@ -21,7 +21,9 @@ const Navigation = () => {
           <li>Contact</li>
         </NavLink>
       </ul>
-      <button onClick={() => navigate("/contact")}>Get started</button>
+      <button onClick={() => navigate("/contact", { replace: true })}>
+        Get started
+      </button>
     </div>
   );
 };

@@ -11,6 +11,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RootLayout from "./layout/RootLayout";
+import ContactLayout from "./layout/ContactLayout";
+import Contactinfo from "./Components/Contactinfo";
+import ContactForm from "./Components/ContactForm";
+import NotFound from "./Components/NotFound";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -19,7 +23,12 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<ContactLayout />}>
+          {/* Make sure the paths are unique */}
+          <Route path="info" element={<Contactinfo />} />
+          <Route path="form" element={<ContactForm />} />
+        </Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Route>
     )
   );
